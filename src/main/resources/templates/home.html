@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+        lang="en"
+        th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" data-th-href="@{'css/output.css'}">
+    <title>Home page</title>
 </head>
 <body>
-<div>
-    <h1 data-th-text="${name}" >New</h1>
-    <h1>Home Page</h1>
+<div id="content">
+    <h1>Welcome to home page</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        ratione!
+    </p>
 </div>
+<script>
+    console.log("Home page");
+</script>
 </body>
 </html>
