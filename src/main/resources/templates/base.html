@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html
-        th:fragment="parent(content,title)"
+        th:fragment="parent(content,title,script)"
         lang="en"
         xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -10,9 +10,31 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet">
 </head>
 <body>
+
+    <ul>
+        <li>
+            <a data-th-href="@{'home'}">Home</a>
+        </li>
+    <ul>
+        <li>
+            <a data-th-href="@{'services'}">services</a>
+        </li>
+    <ul>
+        <li>
+            <a data-th-href="@{'about'}">About</a>
+        </li>
+    </ul>
+
+
+
    <section data-th-replace="${content}"></section>
+
+    <th:block data-th-replace="${script}"></th:block>
+
+    <footer class="p-4">Footer : Learn Code with durgesh</footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
 </body>
 </html>
