@@ -11,21 +11,7 @@
 </head>
 <body>
 
-    <ul>
-        <li>
-            <a data-th-href="@{'home'}">Home</a>
-        </li>
-    <ul>
-        <li>
-            <a data-th-href="@{'services'}">services</a>
-        </li>
-    <ul>
-        <li>
-            <a data-th-href="@{'about'}">About</a>
-        </li>
-    </ul>
-
-
+    <div data-th-replace="~{navbar :: navbar}"></div>
 
    <section data-th-replace="${content}"></section>
 
