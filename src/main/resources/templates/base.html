@@ -11,13 +11,16 @@
 </head>
 <body>
 
-    <div data-th-replace="~{navbar :: navbar}"></div>
+    <div  data-th-replace="navbar :: navbar"></div>
 
-   <section data-th-replace="${content}"></section>
+   <section class="p-4" data-th-replace="${content}"></section>
 
-    <th:block data-th-replace="${script}"></th:block>
+    <th:block class="p-4" data-th-replace="${script}"></th:block>
+
+
 
     <footer class="p-4">Footer : Learn Code with durgesh</footer>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
