@@ -2,28 +2,37 @@
 <html
         th:fragment="parent(content,title,script)"
         lang="en"
-        xmlns:th="http://www.thymeleaf.org">
+        xmlns:th="http://www.thymeleaf.org"
+        class="light" >
 <head>
     <meta charset="UTF-8">
     <title data-th-replace="${title}">Title</title>
+
+    <!--    tailwind css file-->
     <link rel="stylesheet" data-th-href="@{'css/output.css'}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet">
+
+<!--    flowbite link-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+
+<!--    font awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body>
+<body class="dark:bg-gray-900 bg-gray-100 dark:text-white">
 
-    <div  data-th-replace="~{navbar :: navbar}"></div>
+<div data-th-replace="~{navbar :: navbar}"></div>
 
-   <section class="p-4" data-th-replace="${content}"></section>
+<section class="p-4" data-th-replace="${content}"></section>
 
-    <th:block class="p-4" data-th-replace="${script}"></th:block>
+<th:block class="p-4" data-th-replace="${script}"></th:block>
 
-
-
-    <footer class="p-4">Footer : Learn Code with durgesh</footer>
+<footer class="p-4">Footer : Learn Code with durgesh</footer>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script data-th-src="@{'/js/script.js'}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 </body>
 </html>
